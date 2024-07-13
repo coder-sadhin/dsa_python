@@ -141,3 +141,28 @@ class LinkedList:
             pos = pos + 1
         # if not find the value 
         return 'Not Found'
+    
+    # this function use for access value like list
+    def __getitem__(self,index):
+        curr = self.head
+        pos = 0
+
+        while curr != None:
+            if pos == index:
+                return curr.data
+            curr = curr.next
+            pos = pos + 1
+        # if not find the index 
+        return 'IndexError'
+    
+
+L = LinkedList()
+     
+
+L.insert_head(1)
+L.append(2)
+L.append(3)
+L.delete_head()
+L.insert_head(4)
+
+print(L[2])
