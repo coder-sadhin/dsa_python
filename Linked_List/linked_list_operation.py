@@ -35,6 +35,24 @@ class LinkedList:
         # increment n
         self.n = self.n + 1
 
+    # this is for append to the list
+    # its called for append on tail
+    def append(self,value):
+        new_node = Node(value)
+
+        # if list is empty
+        if self.head == None:
+            self.head = new_node
+            self.n = self.n + 1
+            return
+
+        curr = self.head
+        while curr.next != None:
+            curr = curr.next
+
+        # you are at the last node
+        curr.next = new_node
+        self.n = self.n + 1
     
 
 
