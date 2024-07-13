@@ -21,7 +21,7 @@ class Stack:
             self.top = self.top.next
             return data
         
-    def empty(self):
+    def is_empty(self):
         return self.top == None
     
     def peek(self):
