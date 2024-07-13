@@ -165,4 +165,5 @@ L.append(3)
 L.delete_head()
 L.insert_head(4)
 
+print(L)
 print(L[2])
