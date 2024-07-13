@@ -54,3 +54,39 @@ def brackets(expr):
         print("Imbalanced")
 
 # brackets("(a+b)")
+
+# find the celebrety from a list of lists
+
+def celebrity(L):
+    s = Stack()
+    for i in range(len(L)):
+        s.push(i)
+
+    while s.size() >= 2:
+        i = s.pop()
+        j = s.pop()
+
+        if L[i][j] == 0:
+            # j is not a celebrity
+            s.push(i)
+        else:
+            # i is not a celebrity
+            s.push(j)
+
+    cel = s.pop()
+
+    for i in range(len(L)):
+        if i != cel:
+            if L[i][cel] != 1 or L[cel][i] != 0:
+                print("No celebrity")
+                return
+    print("Celebrity is",cel)
+
+L = [
+     [0,1,1,1],
+     [0,0,1,1],
+     [1,0,0,1],
+     [0,0,0,0]
+]
+
+celebrity(L)
