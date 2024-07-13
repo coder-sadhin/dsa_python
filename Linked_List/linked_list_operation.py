@@ -106,3 +106,25 @@ class LinkedList:
         # curr -> 2nd last node
         curr.next = None
         self.n = self.n - 1
+
+    # this is for delete from any number after
+    def remove(self,value):
+        # if head is empty
+        if self.head == None:
+            return 'Empty LL'
+
+        # you want to remove the head node
+        if self.head.data == value:
+            return self.delete_head()
+
+        curr = self.head
+
+        while curr.next != None:
+            if curr.next.data == value:
+                break
+            curr = curr.next
+        if curr.next == None:
+            return 'Not Found'
+        else:
+            curr.next = curr.next.next
+            self.n = self.n - 1
