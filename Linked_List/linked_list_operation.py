@@ -78,4 +78,12 @@ class LinkedList:
         self.head = None
         self.n = 0
 
+    # this function for delete head
+    def delete_head(self):
+        # if head is empty
+        if self.head == None:
+            return 'Empty LL'
+
+        self.head = self.head.next
+        self.n = self.n - 1
 
