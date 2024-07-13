@@ -13,4 +13,10 @@ class Stack:
         new_node.next = self.top
         self.top = new_node
 
-    
+    def pop(self):
+        if self.top is None:
+            return "Stack Empty"
+        else:
+            data = self.top.data
+            self.top = self.top.next
+            return data
