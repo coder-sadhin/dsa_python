@@ -53,6 +53,25 @@ class LinkedList:
         # you are at the last node
         curr.next = new_node
         self.n = self.n + 1
+
+    # this function for insert at any position of the list
+    def insert_after(self,after,value):
+        new_node = Node(value)
+        curr = self.head
+
+        # find the node of the index
+        while curr != None:
+            if curr.data == after:
+                break
+            curr = curr.next
+
+        # inserting the value
+        if curr != None:
+            new_node.next = curr.next
+            curr.next = new_node
+            self.n = self.n + 1
+        else:
+            return 'Item not found'
     
 
 
