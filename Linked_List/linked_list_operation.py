@@ -128,3 +128,16 @@ class LinkedList:
         else:
             curr.next = curr.next.next
             self.n = self.n - 1
+
+    # this function use for find the value position
+    def search(self,item):
+        curr = self.head
+        pos = 0
+        # find the value
+        while curr != None:
+            if curr.data == item:
+                return pos
+            curr = curr.next
+            pos = pos + 1
+        # if not find the value 
+        return 'Not Found'
