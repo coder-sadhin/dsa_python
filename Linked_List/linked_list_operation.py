@@ -87,3 +87,22 @@ class LinkedList:
         self.head = self.head.next
         self.n = self.n - 1
 
+    # this function for delete value from tail
+    def pop(self):
+        # if head is empty
+        if self.head == None:
+            return 'Empty LL'
+
+        curr = self.head
+
+        # if head have only one node
+        if curr.next == None:
+            return self.delete_head()
+      
+        # find the 2nd last node
+        while curr.next.next != None:
+            curr = curr.next
+
+        # curr -> 2nd last node
+        curr.next = None
+        self.n = self.n - 1
