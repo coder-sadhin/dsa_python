@@ -15,6 +15,15 @@ class LinkedList:
     def __len__(self):
         return self.n
     
+    # this is for veiw the linked list
+    def __str__(self):
+        curr = self.head
+        result = ''
+        while curr != None:
+            result = result + str(curr.data) + '->'
+            curr = curr.next
+        return result[:-2]
+    
     # this is for insert value on head 
     def insert_head(self,value):
         # new node
@@ -25,5 +34,7 @@ class LinkedList:
         self.head = new_node
         # increment n
         self.n = self.n + 1
+
+    
 
 
