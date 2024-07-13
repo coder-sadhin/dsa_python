@@ -35,3 +35,11 @@ class Stack:
         while temp is not None:
             print(temp.data,end=' ')
             temp = temp.next
+
+    def size(self):
+        temp = self.top
+        counter = 0
+        while temp is not None:
+            temp = temp.next
+            counter+=1
+        return counter
