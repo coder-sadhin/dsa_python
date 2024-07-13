@@ -20,3 +20,6 @@ class Stack:
             data = self.top.data
             self.top = self.top.next
             return data
+        
+    def empty(self):
+        return self.top == None
