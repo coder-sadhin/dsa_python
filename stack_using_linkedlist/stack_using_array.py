@@ -10,3 +10,11 @@ class Stack:
         else:
             self.top+=1
             self.stack[self.top] = value
+        
+    def pop(self):
+        if self.top == -1:
+            return "Empty"
+        else:
+            data = self.stack[self.top]
+            self.top-=1
+            print(data)
