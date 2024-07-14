@@ -18,3 +18,7 @@ class Stack:
             data = self.stack[self.top]
             self.top-=1
             print(data)
+
+    def traverse(self):
+        for i in range(self.top + 1):
+            print(self.stack[i],end=' ')
