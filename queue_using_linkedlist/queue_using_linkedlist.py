@@ -37,6 +37,12 @@ class Queue:
             return self.rear.data
         else:
             return "Empty queue"
+        
+    def traverse(self):
+        temp = self.front
+        while temp is not None:
+            print(temp.data,end=' ')
+            temp = temp.next
 
 
 q = Queue()
