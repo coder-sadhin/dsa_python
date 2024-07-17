@@ -23,5 +23,8 @@ class Queue:
         else:
             self.front = self.front.next
 
+    def is_empty(self):
+        return self.front == None
+
 
 q = Queue()
