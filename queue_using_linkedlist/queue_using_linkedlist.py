@@ -16,6 +16,12 @@ class Queue:
         else:
             self.rear.next = new_node
             self.rear = new_node
+    
+    def dequeue(self):
+        if self.front == None:
+            return "Queue empty"
+        else:
+            self.front = self.front.next
 
 
 q = Queue()
