@@ -31,6 +31,12 @@ class Queue:
             return self.front.data
         else:
             return "Empty queue"
+    
+    def rear_item(self):
+        if (not self.is_empty()):
+            return self.rear.data
+        else:
+            return "Empty queue"
 
 
 q = Queue()
