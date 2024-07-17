@@ -46,3 +46,24 @@ class Queue:
 
 
 q = Queue()
+q.enqueue(3)
+q.enqueue(4)
+q.enqueue(5)
+q.enqueue(7)
+
+
+q.traverse()
+     
+
+q.dequeue()
+
+q.enqueue(8)
+
+print(q.is_empty())
+
+print(q.front_item())
+
+print(q.rear_item())
+
+q.dequeue()
+q.traverse()
