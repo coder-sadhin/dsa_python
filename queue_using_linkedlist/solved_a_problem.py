@@ -1,53 +1,66 @@
-from queue_using_linkedlist import Queue
+class Node:
+    def __init__(self,value):
+        self.data = value
+        self.next = None
+     
+
+class Stack:
+    def __init__(self):
+        self.top = None
+
+    def push(self, value):
+        new_node = Node(value)
+        new_node.next = self.top
+        self.top = new_node
+
+    def pop(self):
+        if self.top is None:
+            return "Stack Empty"
+        else:
+            data = self.top.data
+            self.top = self.top.next
+            return data
+        
+    def is_empty(self):
+        return self.top == None
+    
+    def peek(self):
+        if self.top is None:
+            return "Stack Empty"
+        else:
+            return self.top.data
+    
+    def traverse(self):
+        temp = self.top
+        while temp is not None:
+            print(temp.data,end=' ')
+            temp = temp.next
+
+    def size(self):
+        temp = self.top
+        counter = 0
+        while temp is not None:
+            temp = temp.next
+            counter+=1
+        return counter
 
 def check_balanced_parenthesis(s):
-    stk = Queue()
-    # for itm in s:
-        # print(itm)
+    stk = Stack()
     for item in s:
-        print(item)
         if item in '({[':
-            stk.enqueue(item)  # Use push instead of enqueue
+            stk.push(item)
         elif item in ')}]':
             if stk.is_empty():
                 return False
-            if item == ')' and stk.front_item() == '(':  # Use front_item instead of front_item
-                stk.dequeue()  # Use dequeue instead of dequeue
-            elif item == '}' and stk.front_item() == '{':
-                stk.dequeue()
-            elif item == ']' and stk.front_item() == '[':
-                stk.dequeue()
+            if item == ')' and stk.peek() == '(':
+                stk.pop()
+            elif item == '}' and stk.peek() == '{':
+                stk.pop()
+            elif item == ']' and stk.peek() == '[':
+                stk.pop()
             else:
                 return False
-    #     print(item)
-    #     if item == '(':
-    #         stk.enqueue(item)
-    #     elif item == '{':
-    #         stk.enqueue(item)
-    #     elif item == '[':
-    #         stk.enqueue(item)
-    #     elif item == ')':
-    #         if stk.front_item() == '(':
-    #             stk.dequeue()
-    #         else:
-    #             return False
-    #     elif item == '}':
-    #         if stk.front_item() == '{':
-    #             stk.dequeue()
-    #         else:
-    #             return False
-    #     elif item == ']':
-    #         if stk.front_item() == '[':
-    #             stk.dequeue()
-    #         else:
-    #             return False
-    #     elif item == ' ':
-    #         continue
-    #     else:
-    #         continue
-            
     return stk.is_empty()
 
-s="{[(a+b) + (c+d)]}"
-
+s = "{[(a+b) + (c+d)]}"
 print(check_balanced_parenthesis(s))
