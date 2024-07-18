@@ -17,8 +17,8 @@ def check_balanced_parenthesis(s):
                 stk.dequeue()
             elif item == ']' and stk.front_item() == '[':
                 stk.dequeue()
-            else:
-                return False
+            # else:
+            #     return False
     #     print(item)
     #     if item == '(':
     #         stk.enqueue(item)
