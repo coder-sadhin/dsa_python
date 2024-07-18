@@ -62,5 +62,5 @@ def check_balanced_parenthesis(s):
                 return False
     return stk.is_empty()
 
-s = "{[(a+b) + (c+d)]}"
-print(check_balanced_parenthesis(s))
+# s = "{[(a+b) + (c+d)]}"
+# print(check_balanced_parenthesis(s))
