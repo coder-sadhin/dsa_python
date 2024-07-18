@@ -52,18 +52,18 @@ q.enqueue(5)
 q.enqueue(7)
 
 
-q.traverse()
+# q.traverse()
      
 
-q.dequeue()
+# q.dequeue()
 
-q.enqueue(8)
+# q.enqueue(8)
 
-print(q.is_empty())
+# print(q.is_empty())
 
-print(q.front_item())
+# print(q.front_item())
 
-print(q.rear_item())
+# print(q.rear_item())
 
-q.dequeue()
-q.traverse()
+# q.dequeue()
+# q.traverse()
