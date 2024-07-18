@@ -44,23 +44,23 @@ class Stack:
             counter+=1
         return counter
 
-def check_balanced_parenthesis(s):
-    stk = Stack()
-    for item in s:
-        if item in '({[':
-            stk.push(item)
-        elif item in ')}]':
-            if stk.is_empty():
-                return False
-            if item == ')' and stk.peek() == '(':
-                stk.pop()
-            elif item == '}' and stk.peek() == '{':
-                stk.pop()
-            elif item == ']' and stk.peek() == '[':
-                stk.pop()
-            else:
-                return False
-    return stk.is_empty()
+# def check_balanced_parenthesis(s):
+#     stk = Stack()
+#     for item in s:
+#         if item in '({[':
+#             stk.push(item)
+#         elif item in ')}]':
+#             if stk.is_empty():
+#                 return False
+#             if item == ')' and stk.peek() == '(':
+#                 stk.pop()
+#             elif item == '}' and stk.peek() == '{':
+#                 stk.pop()
+#             elif item == ']' and stk.peek() == '[':
+#                 stk.pop()
+#             else:
+#                 return False
+#     return stk.is_empty()
 
-s = "{[(a+b) + (c+d)]}"
-print(check_balanced_parenthesis(s))
+# s = "{[(a+b) + (c+d)]}"
+# print(check_balanced_parenthesis(s))
