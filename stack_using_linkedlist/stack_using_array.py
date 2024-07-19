@@ -17,6 +17,12 @@ class Stack:
         data = self.__stack[self.top]
         self.top -= 1
         return data
+    # def pop(self):
+    #     if self.top == -1:
+    #         return None  # Stack is empty
+    #     data = self.__stack[self.top]
+    #     self.top -= 1
+    #     return data
 
     def traverse(self):
         if self.top == -1:
