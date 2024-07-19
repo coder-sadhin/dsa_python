@@ -3,6 +3,10 @@ class Stack:
         self.size = size
         self.__stack = [None] * self.size
         self.top = -1
+    # def __init__(self, size):
+    #     self.size = size
+    #     self.__stack = [None] * self.size
+    #     self.top = -1
     
     def push(self, value):
         if self.top == self.size - 1:
