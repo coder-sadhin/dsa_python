@@ -26,6 +26,13 @@ class Stack:
             for i in range(self.top + 1):
                 print(self.__stack[i], end=' ')
             print()  # Add a newline after traversal
+    # def traverse(self):
+    #     if self.top == -1:
+    #         print("Stack is empty")
+    #     else:
+    #         for i in range(self.top + 1):
+    #             print(self.__stack[i], end=' ')
+    #         print()  # Add a newline after traversal
 
 
 # Test the stack
