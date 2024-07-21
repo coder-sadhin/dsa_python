@@ -53,22 +53,6 @@ def brackets(expr):
         print("Balanced")
     else:
         print("Imbalanced")
-# def brackets(expr):
-#     s = Stack()
-#     for i in expr:
-#         if i == '(':
-#             s.push(i)
-#         elif i == ')':
-#             if s.peek() == '(':
-#                 s.pop()
-#             else:
-#                 print("Imbalanced")
-#                 return 
-
-#     if (s.is_empty()):
-#         print("Balanced")
-#     else:
-#         print("Imbalanced")
 
 # brackets("(a+b)")
 
